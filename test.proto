@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+service TestService {
+  rpc TestMethod(TestMessage) returns (TestMessage);
+}
+
+message TestMessage {
+  string id = 1;
+}
