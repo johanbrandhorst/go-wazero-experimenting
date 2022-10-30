@@ -14,3 +14,7 @@ all: wasm/protoc-gen-go.wasm wasm/protoc-gen-go-grpc.wasm protoc-gen-go protoc-g
 
 generate: all
 	go run github.com/bufbuild/buf/cmd/buf@v1.9.0 generate
+
+clean:
+	rm -r wasm
+	rm protoc-gen-go protoc-gen-go-grpc
